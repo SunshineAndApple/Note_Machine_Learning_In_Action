@@ -5,6 +5,7 @@ import operator
 
 
 # create demo dataset
+# page19
 def createDataSet():
     group = np.array([[1.0, 1.1], [1.0, 1.0], [0.0, 0.0], [0.0, 0.1]])
     labels = ['A', 'A', 'B', 'B']
@@ -16,6 +17,7 @@ def createDataSet():
 # dataSet: 样本
 # labels: 特征
 # k：k值
+# page19
 def classify0(inX, dataSet, labels, k):
     # 取样本空间第一维的数值，这里是行
     dataSetSize = dataSet.shape[0]
@@ -32,7 +34,7 @@ def classify0(inX, dataSet, labels, k):
     sortedDisIndicies = distances.argsort()
 
     # 定义字典开始按照k查找
-    print(sortedDisIndicies)
+    # print(sortedDisIndicies)
     # 定义一个空字典，字典的key：特征 value：权重
     classCount = {}
     '''
@@ -61,15 +63,16 @@ def classify0(inX, dataSet, labels, k):
     '''
     # 按照降序排列结果，将权重最大的排到最前面
     sortdClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse=True)
-    '''
-    print(sortdClassCount, sortdClassCount[0][0])
+    ''' 
+    print('sortdClassCount: {}, sortdClassCount[0][0]: {}'.format(sortdClassCount, sortdClassCount[0][0]))
     '''
     # 取权重最大值作为结果
     return sortdClassCount[0][0]
+
 
 
 if __name__ == '__main__':
     import kNN
 
     group, labels = kNN.createDataSet()
-    classify0((0, 0), group, labels, 3)
+    print(classify0((0, 2), group, labels, 3))
