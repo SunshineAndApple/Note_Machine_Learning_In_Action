@@ -73,6 +73,10 @@ def classify0(inX, dataSet, labels, k):
 
 if __name__ == '__main__':
     import kNN
+    #
+    # group, labels = kNN.createDataSet()
+    # print(classify0((0, 2), group, labels, 3))
 
-    group, labels = kNN.createDataSet()
-    print(classify0((0, 2), group, labels, 3))
+    a = np.array([[1, 2, 3], [4, 5, 4]])
+    a=a**2
+    print(a)

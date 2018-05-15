@@ -2,6 +2,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import kNN
 
 # read file
 def file2matrix(filename):
@@ -18,17 +19,18 @@ def file2matrix(filename):
             dataReadlist.append(list(map(float, lineSplit[0:3])))
             # 最后一列是特征，使用负索引的方式可以取出
             dataLebels.append(int(lineSplit[-1]))
-    # 将list转换为矩阵
-    dataMatrix = np.matrix(dataReadlist)
+    # 将list转换为array，不要用矩阵！！！矩阵局限性大
+    # dataMatrix = np.matrix(dataReadlist)
+    dataArray = np.array(dataReadlist)
     # print('maxtix: {}, type: {}, shape: {}'.format(dataMatrix[0:2], dataMatrix.dtype, dataMatrix.shape))
-    return dataMatrix, dataLebels
+    return dataArray, dataLebels
 
 # page23
-def showData(dataMatrix, dataLebels):
+def showData(dataArray, dataLebels):
     fig = plt.figure()
     ax = fig.add_subplot(111)
     # 这里需要将矩阵的列转换为list
-    ax.scatter(dataMatrix[:, 1].tolist(), dataMatrix[:, 2].tolist())
+    ax.scatter(dataArray[:, 1].tolist(), dataArray[:, 2].tolist())
 
     plt.show()
 
@@ -46,7 +48,31 @@ def autoNorm(dataArray):
     # print('normDataArray: {}, minValues: {}, maxValues: {}'.format(normDataArray[0:2], minValues, maxValues))
     return normDataArray
 
+
+# 验证K-近邻算法
+# 测试10%的准确率
+def datingClassTest():
+    # 测试比例值 10%
+    ratio = 0.1
+    # 读取
+    datingDataArray, datingLabels = file2matrix('datingTestSet2.txt')
+    # 归一化
+    normDataArray = autoNorm(datingDataArray)
+    m = normDataArray.shape[0]
+    numTestArray = int(m * ratio)
+    errorCount = 0.0
+    for i in range(numTestArray):
+        result = kNN.classify0(normDataArray[i, :], normDataArray[numTestArray:m, :], datingLabels[numTestArray:m], 3)
+        print('came back: {}, real answer: {}'.format(result, datingLabels[i]))
+        if ( result != datingLabels[i]): errorCount += 1.0
+    print('the total error rate is： {}'.format(errorCount/numTestArray))
+
+
 if __name__ == '__main__':
-    dataMatrix, dataLebels = file2matrix('datingTestSet2.txt')
-    # showData(dataMatrix, dataLebels)
-    autoNorm(dataMatrix)
+
+    # dataArray, dataLebels = file2matrix('datingTestSet2.txt')
+    # showData(dataArray, dataLebels)
+    # autoNorm(dataArray)
+
+
+    datingClassTest()
