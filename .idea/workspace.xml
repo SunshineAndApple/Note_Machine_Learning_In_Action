@@ -26,8 +26,11 @@
       <file leaf-file-name="dating.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Chapter2/dating.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+            <state relative-caret-position="538">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+              <folding>
+                <element signature="e#11#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -196,10 +199,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/program/Anaconda3501/Lib/site-packages/matplotlib/figure.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="1012" column="32" lean-forward="true" selection-start-line="1012" selection-start-column="32" selection-end-line="1012" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chapter2/dating.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        <state relative-caret-position="538">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="e#11#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
