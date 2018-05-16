@@ -1,5 +1,6 @@
 import numpy as np
 from math import log
+import operator
 
 def createDataAarray():
     dataArray = [[1, 1, 'yes'],
@@ -43,15 +44,15 @@ def splitDataSet(dataSet, axis, value):
 # page:38
 def chooseBestFeatureToSplit(dataSet):
     numFeatures = len(dataSet[0]) - 1      #the last column is used for the labels
-    print(numFeatures)
+    # print(numFeatures)
     baseEntropy = calcShannonEnt(dataSet)
     bestInfoGain = 0.0; bestFeature = -1
     for i in range(numFeatures):        #iterate over all the features
-        print(i)
+        # print(i)
         featList = [example[i] for example in dataSet]#create a list of all the examples of this feature
-        print('featList:{}'.format(featList))
+        # print('featList:{}'.format(featList))
         uniqueVals = set(featList)       #get a set of unique values
-        print('uniqueVals:{}'.format(uniqueVals))
+        # print('uniqueVals:{}'.format(uniqueVals))
         newEntropy = 0.0
         for value in uniqueVals:
             subDataSet = splitDataSet(dataSet, i, value)
@@ -63,9 +64,68 @@ def chooseBestFeatureToSplit(dataSet):
             bestFeature = i
     return bestFeature                      #returns an integer
 
+
+def majorityCnt(classList):
+    classCount = {}
+    for vote in classList:
+        if vote in classCount.keys(): classCount[vote] = 0
+        classCount[vote] += 1
+    sortedClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse=True)
+    return sortedClassCount[0][0]
+
+def createDecisionTree(dataSet, labels):
+    classList = [example[-1] for example in dataSet]
+
+    if classList.count(classList[0] == len(classList)):
+        return classList[0]
+
+    if len(dataSet[0]) == 1:
+        return majorityCnt(classList)
+
+    bestFeat = chooseBestFeatureToSplit(dataSet)
+    bestFeatLabel = labels[bestFeat]
+    myTree = {bestFeatLabel: {}}
+    del(labels[bestFeat])
+
+    featValues = [listIter[bestFeat] for listIter in dataSet]
+    uniqueVals = set(featValues)
+
+    for value in uniqueVals:
+        subLabels = labels[:]
+        myTree[bestFeatLabel][value] = createDecisionTree(splitDataSet(dataSet, bestFeat, value), subLabels)
+    return myTree
+
+    # classList = [example[-1] for example in dataSet]
+    #
+    # if classList.count(classList[0]) == len(classList):
+    #     return classList[0]
+    #
+    # if len(dataSet[0]) == 1:
+    #     return majorityCnt(classList)
+    #
+    # bestFeat = chooseBestFeatureToSplit(dataSet)
+    # bestFeatLabel = labels[bestFeat]
+    # myTree = {bestFeatLabel:{}}
+    # del(labels[bestFeat])
+    
+    # featValues = [example[bestFeat] for example in dataSet]
+    # uniqueVals = set(featValues)
+    #
+    # for value in uniqueVals:
+    #     subLabels = labels[:]
+    #     myTree[bestFeatLabel][value] = createDecisionTree(splitDataSet(dataSet, bestFeat, value),subLabels)
+    #     print('bestFeatLabel:{}, value:{}'.format(bestFeatLabel, value))
+    #     print('myTree[bestFeatLabel][value]: {}'.format(myTree[bestFeatLabel][value]))
+    # return myTree
+
+
 if __name__ == '__main__':
     dataArray, dataLabels = createDataAarray()
-    print(calcShannonEnt(dataArray))
-    dataSet = splitDataSet(dataArray, 0, 1)
-    print(dataSet)
-    print(chooseBestFeatureToSplit(dataArray))
+    # print(calcShannonEnt(dataArray))
+    # dataSet = splitDataSet(dataArray, 0, 1)
+    # print(dataSet)
+    # print(chooseBestFeatureToSplit(dataArray))
+    print(createDecisionTree(dataArray, dataLabels))
+
+    # ddd = {'a':1, 'b':2, 'c':3}
+    # print(ddd[0][0])
