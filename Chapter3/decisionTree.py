@@ -73,50 +73,36 @@ def majorityCnt(classList):
     sortedClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
 
+# 递归创建决策树
+# page：41
 def createDecisionTree(dataSet, labels):
     classList = [example[-1] for example in dataSet]
 
-    if classList.count(classList[0] == len(classList)):
+    # 当类别已经完全一样，就不需要再划分下去
+    if classList.count(classList[0]) == len(classList):
+        print('== classList: {}'.format(classList)  )
         return classList[0]
 
+    # 所有类别都已划分完成
     if len(dataSet[0]) == 1:
         return majorityCnt(classList)
 
     bestFeat = chooseBestFeatureToSplit(dataSet)
     bestFeatLabel = labels[bestFeat]
-    myTree = {bestFeatLabel: {}}
+    myTree = {bestFeatLabel:{}}
     del(labels[bestFeat])
-
-    featValues = [listIter[bestFeat] for listIter in dataSet]
+    
+    featValues = [example[bestFeat] for example in dataSet]
     uniqueVals = set(featValues)
 
     for value in uniqueVals:
         subLabels = labels[:]
-        myTree[bestFeatLabel][value] = createDecisionTree(splitDataSet(dataSet, bestFeat, value), subLabels)
+        # 嵌套的字典取值：
+        # s = {'a': {0: 'no', 1: {'flippers': {0: 'no', 1: 'maybe'}}}, 'b': {}}  # 构造字典
+        # >> > s['a'][0]  # 取值
+        # 'no'
+        myTree[bestFeatLabel][value] = createDecisionTree(splitDataSet(dataSet, bestFeat, value),subLabels)
     return myTree
-
-    # classList = [example[-1] for example in dataSet]
-    #
-    # if classList.count(classList[0]) == len(classList):
-    #     return classList[0]
-    #
-    # if len(dataSet[0]) == 1:
-    #     return majorityCnt(classList)
-    #
-    # bestFeat = chooseBestFeatureToSplit(dataSet)
-    # bestFeatLabel = labels[bestFeat]
-    # myTree = {bestFeatLabel:{}}
-    # del(labels[bestFeat])
-    
-    # featValues = [example[bestFeat] for example in dataSet]
-    # uniqueVals = set(featValues)
-    #
-    # for value in uniqueVals:
-    #     subLabels = labels[:]
-    #     myTree[bestFeatLabel][value] = createDecisionTree(splitDataSet(dataSet, bestFeat, value),subLabels)
-    #     print('bestFeatLabel:{}, value:{}'.format(bestFeatLabel, value))
-    #     print('myTree[bestFeatLabel][value]: {}'.format(myTree[bestFeatLabel][value]))
-    # return myTree
 
 
 if __name__ == '__main__':
@@ -127,5 +113,3 @@ if __name__ == '__main__':
     # print(chooseBestFeatureToSplit(dataArray))
     print(createDecisionTree(dataArray, dataLabels))
 
-    # ddd = {'a':1, 'b':2, 'c':3}
-    # print(ddd[0][0])
