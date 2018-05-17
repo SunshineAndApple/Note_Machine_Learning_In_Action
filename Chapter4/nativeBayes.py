@@ -35,8 +35,8 @@ def trainNB(trainList, trainCategory):
     numWords = len(trainList[0])
     pAbusive = sum(trainCategory) / numTrainDoc
 
-    p0Num = np.zeros(numWords)
-    p1Num = np.zeros(numWords)
+    p0Num = np.ones(numWords)
+    p1Num = np.ones(numWords)
     p0Denom = 2.0
     p1Denom = 2.0
 
