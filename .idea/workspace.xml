@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16115ab6-a261-496f-b4de-5656d4d2741e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Chapter3/decisionTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chapter3/decisionTree.py" afterDir="false" />
-    </list>
+    <list default="true" id="16115ab6-a261-496f-b4de-5656d4d2741e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,14 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="decisionTree.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Chapter3/decisionTree.py">
+      <file leaf-file-name="nativeBayes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chapter4/nativeBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="147">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -47,14 +42,18 @@
         <option value="$PROJECT_DIR$/chapter3.py" />
         <option value="$PROJECT_DIR$/decisionTree.py" />
         <option value="$PROJECT_DIR$/Chapter3/decisionTree.py" />
+        <option value="$PROJECT_DIR$/Chapter4/nativeBayes.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="164" />
-    <option name="y" value="6" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="970" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -72,12 +71,7 @@
             <path>
               <item name="Note_Machine_Learning_In_Action" type="b2602c69:ProjectViewProjectNode" />
               <item name="Note_Machine_Learning_In_Action" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Note_Machine_Learning_In_Action" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Note_Machine_Learning_In_Action" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter3" type="462c0819:PsiDirectoryNode" />
+              <item name="Chapter4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -87,7 +81,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -106,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.decisionTree (1)">
+  <component name="RunManager" selected="Python.nativeBayes">
     <configuration name="dating" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Note_Machine_Learning_In_Action" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,7 +155,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="kNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="nativeBayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Note_Machine_Learning_In_Action" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,11 +163,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Chapter4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Chapter2/kNN.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Chapter4/nativeBayes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -198,19 +192,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.kNN" />
       <item itemvalue="Python.dating" />
       <item itemvalue="Python.temp" />
       <item itemvalue="Python.decisionTree" />
       <item itemvalue="Python.decisionTree (1)" />
+      <item itemvalue="Python.nativeBayes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.nativeBayes" />
         <item itemvalue="Python.decisionTree (1)" />
         <item itemvalue="Python.decisionTree" />
         <item itemvalue="Python.temp" />
         <item itemvalue="Python.dating" />
-        <item itemvalue="Python.kNN" />
       </list>
     </recent_temporary>
   </component>
@@ -231,12 +225,12 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15119047" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18352601" />
       <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" />
-      <window_info anchor="right" id="Run" order="3" visible="true" weight="0.30952382" />
+      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.31785715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -279,7 +273,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="23" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -366,11 +360,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Chapter3/decisionTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        <state relative-caret-position="419">
+          <caret line="91" column="31" lean-forward="true" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chapter4/nativeBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
         </state>
       </provider>
     </entry>
