@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16115ab6-a261-496f-b4de-5656d4d2741e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="16115ab6-a261-496f-b4de-5656d4d2741e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +14,7 @@
       <file leaf-file-name="DealData.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TSA/DealData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
+            <state relative-caret-position="468">
               <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
             </state>
           </provider>
@@ -52,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="101" />
     <option name="y" value="14" />
     <option name="width" value="1400" />
@@ -244,7 +242,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="14" width="1400" height="972" extended-state="0" />
+    <frame x="101" y="14" width="1400" height="972" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22254336" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -303,6 +302,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TSA/DealData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TSA/DealData.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1802">
@@ -481,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TSA/DealData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
+        <state relative-caret-position="468">
           <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
         </state>
       </provider>
